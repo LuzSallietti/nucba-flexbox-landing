@@ -1,4 +1,5 @@
 :root{
+    --introBackground:  hsl(217, 28%, 15%);
     --mainBackground: hsl(218, 28%, 13%);
     --footerBackground: hsl(216, 53%, 9%);
     --testimonialsBackground:hsl(219, 30%, 18%);
@@ -7,6 +8,8 @@
     --textsColor: hsl(0, 0%, 100%);
     --gralPadding: 1.5rem;
     --gradient: linear-gradient(90deg, rgba(100,225,217,1) 0%, rgba(51,158,204,1) 100%);
+    --yMargin: 7rem auto;
+    --hoverElement: hsl(176, 68%, 64%);
 }
 * {
     margin: 0;
@@ -34,6 +37,12 @@ h1 {
 strong {
     font-weight: bold;
 }
+.gralPadding {
+    padding: 1.5rem;
+}
+.my-1{
+    margin: 1rem 0;
+}
 .attribution { 
     font-size: 11px; text-align: center;
  }
@@ -43,10 +52,12 @@ strong {
  @media (min-width:280px) {
      body {
          font-size: 14px;
-     }
+     }     
      header {
          width: 100%;
-         padding: var(--gralPadding)
+         padding: var(--gralPadding);
+         background-color: var(--introBackground);
+         
      }
      header nav {
          display: flex;
@@ -65,15 +76,37 @@ strong {
          align-items: center;
      }
      header nav ul li{
+         font-family: var(--secondaryFont);
+         cursor: pointer;
+         transition: all .5s ease;         
+     }
+     header nav ul li:hover{
+        border-bottom: 1px solid #fff;         
+    }
+    header nav ul li a:hover{
+        font-weight: 700;         
+    }
+     main {
          
      }
-     main {
-         padding: var(--gralPadding);
+     main>:first-child {
+         
      }
      main>:first-child div{
-         width: 100%;
-         margin-bottom: 2.5rem;
+         width: 100%;       
+         padding: var(--gralPadding);
      }
+     #shape{
+         height: 75%;
+         width: 100%;
+         position: absolute;
+         z-index: -1;
+         top:0;
+         background-color: var(--introBackground);
+         background-image: url("../images/bg-curvy-mobile.svg"); 
+         background-repeat: no-repeat;
+         background-position: bottom;
+     }   
      main>:first-child button{
          width: 235px;
          height: 50px;
@@ -83,6 +116,13 @@ strong {
          color: var(--textsColor);
          background: var(--gradient);
          border: none;
+         cursor: pointer;
+         font-family: var(--secondaryFont);
+         font-weight: 700;
+         transition: all .5s ease;
+     }
+     main>:first-child button:hover{
+         background: var(--hoverElement);
      }
      h1{
          font-family: var(--secondaryFont);
@@ -90,9 +130,14 @@ strong {
          font-weight: 700;
          margin-bottom: 1rem;
          line-height: 1.75rem;
+         padding: var(--gralPadding);
      }
      p {
          text-align: center;
+         padding: 0 2.25rem;
+     }
+     main>:nth-child(2){
+         margin: var(--yMargin);
      }
      main>:nth-child(2) ul li div {
          width: 75px;
@@ -106,7 +151,9 @@ strong {
          font-weight: 700;
          margin-bottom: 1rem;
      }
-    
+    main>:last-child:first-child{
+        padding: var(--gralPadding);
+    }
      main>:last-child h1{
          font-size: 19px;         
      }
@@ -114,42 +161,64 @@ strong {
          text-align: left;
          margin-bottom: 1rem;
      }
-     .specialLink{
-         width: 42%;
+     .specialLink {
+         width: 130px;
          justify-content: space-between;
          align-items: center;
          display: flex;
          flex-direction: row;
          border-bottom: 2px solid hsl(176, 68%, 64%);
-         padding-bottom:.25rem;
+         padding-bottom: .25rem;
+         margin-left: 2rem;
+         transition: all ease .5s;
      }
+     .specialLink:hover {
+         border-bottom: 2px solid #fff;
+     }
+
      .specialLink a {
          color: hsl(176, 68%, 64%);
          font-size: .75rem;
+         cursor: pointer;
      }
+     .specialLink a:hover {
+        color: #fff;
+    }
      .specialLink div {
          width: 15px;
          height: 15px;
      }
+     
      aside{
          padding: var(--gralPadding);
+         margin: 5rem auto 0 auto;
+     }
+     #quotes{
+         position: absolute;
+         top: -1.25rem;
+         z-index: -1;
+         left: 0;
+         width: 30px;
+         height: auto;
      }
      .card {
          background-color: var(--testimonialsBackground);
          border-radius: 2%;
-         padding: 1.5rem 1rem;
+         padding: var(--gralPadding);
          display: flex;
          flex-direction: row;
          flex-wrap: wrap;
          justify-content: flex-start;
          align-items: center;
          margin: 1.5rem .75rem;
+         position: relative;
      }
      .card p {
          width: 100%;
          text-align: left;
          line-height: 1.5rem;
          margin-bottom: .75rem;
+         padding: 0;
      }
      .card div {
          height: 48px;
@@ -162,15 +231,22 @@ strong {
          display: block;
          padding: .75rem;
      }
-     form {
-         width: 90%;
-         border-radius: 5%;
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-         text-align: center;
-         margin: 0 auto;        
+     form {        
+        border-radius: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto 0 auto;
+        padding: var(--gralPadding);
+        background-color: var(--introBackground);
+        box-shadow: 5px 5px 15px -1px #000000;
+        position: relative;
+        top: 8rem;     
+     }
+     form p {
+         padding: 1rem;
      }
      form input[type=email]{
          height: 50px;
@@ -190,12 +266,19 @@ strong {
          background: var(--gradient);
          color: var(--textsColor);
          font-weight: 700;
+         transition: all .5s ease;
+         cursor: pointer;
      }
+     form button:hover{
+         background: var(--hoverElement);
+     }
+     
      footer {
          background-color: var(--footerBackground);
          display: flex;
          flex-direction: column;
          padding: var(--gralPadding);
+         padding-top: 14rem;       
      }
      footer>:first-child{
          width: 100%;         
@@ -218,17 +301,22 @@ strong {
     .icons {
         width: 15px;
         height: auto;
-              
+        margin: .5rem 0;                      
     }
+   
     footer>:nth-child(3){
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
     }
-    footer>:nth-child(3) a{
+    footer>:nth-child(3) a {
         width: 95%;
         padding-left: 1rem;
+    }
+    footer nav {
+        margin-top: 2rem;
     }
     footer nav ul li {
         padding: .5rem 0;
@@ -239,7 +327,7 @@ strong {
         width: 100%;
         justify-content: center;
         align-items: center;
-        margin-bottom: 2rem;
+        margin: 4rem 0 2rem 0;
     }
     .rssButton {
         width: 30px;
@@ -250,5 +338,13 @@ strong {
         justify-content: center;
         align-items: center;
         margin: 0 .25rem;
-    }      
+        transition: all .5s ease;
+        cursor: pointer;        
+    }
+    .rssButton i:hover {
+        color: var(--hoverElement);
+    }    
+    .rssButton:hover {
+        border: 1px solid var(--hoverElement);
+    }     
  }

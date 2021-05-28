@@ -10,7 +10,7 @@
   <link href="./css/styles.css" rel="stylesheet">  
   <title>Frontend Mentor | Fylo landing page with dark theme and features grid</title>  
 </head>
-<body>
+<body>  
   <header>
     <nav>
       <div>
@@ -28,6 +28,10 @@
     <section>
       <div>
         <img src="./images/illustration-intro.png" alt="illustration">
+      </div>
+      <div id="shape">
+        <!--decorative shape-->
+      </div>      
       </div>
       <h1>All your files in one secure location, accessible<br> anywhere.</h1>
       <p>Fylo stores all your most important files in one secure location. Access them wherever 
@@ -73,26 +77,27 @@
     </section>
     <!--secondary section-->
     <section>
-      <div>
+      <div class="gralPadding">
         <img src="./images/illustration-stay-productive.png" alt="illustration">
       </div>
       <h1>Stay productive, wherever you are</h1>
-      <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
-        storage needs.      
-        Securely share files and folders with friends, family and colleagues for live collaboration. No email 
-        attachments required.</p>
-        <div class="specialLink">
-          <a>See how Fylo works</a>
-          <div class="arrowIcon">
-            <img src="./images/icon-arrow.svg" alt="arrow icon">
-          </div>
-        </div>  
+      <p>Never let location be an issue when accessing your files. Fylo has you covered for all of your filestorage needs.</p>      
+      <p>Securely share files and folders with friends, family and colleagues for live collaboration. No emailattachments required.</p>
+      <div class="specialLink">
+        <a>See how Fylo works</a>
+        <div>
+          <img src="./images/icon-arrow.svg" alt="arrow icon">
+        </div>
+      </div>  
     </section>      
   </main>
   <!--testimonials-->
   <aside>
     <!--1-->
     <div class="card">
+      <div id="quotes">
+        <img src="./images/bg-quotes.png" alt="decorative quotes">
+      </div>
       <p>Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has 
         become a well-oiled collaboration machine.
       </p>
@@ -121,15 +126,16 @@
       </div>
       <span><strong>Iva Boyd</strong><br>Founder & CEO, Huddle</span>      
     </div>
+    <form method="POST" action="https://www.example.com">
+      <h1>Get early access today</h1>
+      <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
+        questions, our support team would be happy to help you.</p>
+        <input type="email" placeholder="email@example.com" name="email" id="email">
+        <button type="submit">Get Started For Free</button>
+    </form>
   </aside>
-  <form method="POST" action="https://www.example.com">
-    <h1>Get early access today</h1>
-    <p>It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
-      questions, our support team would be happy to help you.</p>
-      <input type="email" placeholder="email@example.com" name="email" id="email">
-      <button type="submit">Get Started For Free</button>
-  </form>
- <footer>
+  
+ <footer>  
    <!--logo-->
    <div>
      <div>
@@ -137,7 +143,7 @@
      </div>
    </div>
    <!--legend-->
-   <div>
+   <div class="my-1">
      <div class="icons">
        <img src="./images/icon-location.svg" alt="location icon"> 
      </div>
