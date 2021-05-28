@@ -139,10 +139,14 @@ strong {
      main>:nth-child(2){
          margin: var(--yMargin);
      }
+
      main>:nth-child(2) ul li div {
          width: 75px;
          height: 75px;
          margin: 2rem auto;
+     }
+     main>:nth-child(2) ul li{
+         margin-bottom: 4rem; 
      }
      main>:nth-child(2) ul li h3 {
          text-align: center;
