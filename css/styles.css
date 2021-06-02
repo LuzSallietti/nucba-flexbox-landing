@@ -1,354 +1,572 @@
-:root{
-    --introBackground:  hsl(217, 28%, 15%);
-    --mainBackground: hsl(218, 28%, 13%);
-    --footerBackground: hsl(216, 53%, 9%);
-    --testimonialsBackground:hsl(219, 30%, 18%);
-    --mainFont:'Open Sans', sans-serif;
-    --secondaryFont:'Raleway', sans-serif;
-    --textsColor: hsl(0, 0%, 100%);
-    --gralPadding: 1.5rem;
-    --gradient: linear-gradient(90deg, rgba(100,225,217,1) 0%, rgba(51,158,204,1) 100%);
-    --yMargin: 7rem auto;
-    --hoverElement: hsl(176, 68%, 64%);
+:root {
+  --introBackground: hsl(217, 28%, 15%);
+  --mainBackground: hsl(218, 28%, 13%);
+  --footerBackground: hsl(216, 53%, 9%);
+  --testimonialsBackground: hsl(219, 30%, 18%);
+  --mainFont: "Open Sans", sans-serif;
+  --secondaryFont: "Raleway", sans-serif;
+  --textsColor: hsl(0, 0%, 100%);
+  --gralPadding: 1.5rem;
+  --gradient: linear-gradient(
+    90deg,
+    rgba(100, 225, 217, 1) 0%,
+    rgba(51, 158, 204, 1) 100%
+  );
+  --yMargin: 7rem auto;
+  --hoverElement: hsl(176, 68%, 64%);
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-    font-weight: normal;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-weight: normal;
 }
-* img{
-    width: 100%;
-    height: auto;
+* img {
+  width: 100%;
+  height: auto;
 }
 body {
-    font-family: var(--mainFont);
-    color: var(--textsColor);
-    background-color: var(--mainBackground);    
+  font-family: var(--mainFont);
+  color: var(--textsColor);
+  background-color: var(--mainBackground);
 }
 a {
-    color: var(--textsColor);
+  color: var(--textsColor);
 }
 h1 {
-    font-family: var(--secondaryFont);
+  font-family: var(--secondaryFont);
 }
 strong {
-    font-weight: bold;
+  font-weight: bold;
 }
 .gralPadding {
+  padding: 1.5rem;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media (min-width: 320px) {
+  body {
+    font-size: 14px;
+  }
+  header {
+    width: 100%;
+    padding: var(--gralPadding);
+    background-color: var(--introBackground);
+  }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav div {
+    width: 30%;
+  }
+  header nav ul {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  header nav ul li {
+    font-family: var(--secondaryFont);
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  header nav ul li:hover {
+    border-bottom: 1px solid #fff;
+  }
+  header nav ul li a:hover {
+    font-weight: 700;
+  }
+  main > :first-child div {
+    width: 100%;
+    padding: var(--gralPadding);
+  }
+  #shape {
+    height: 75%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    background-color: var(--introBackground);
+    background-image: url("../images/bg-curvy-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+  main > :first-child button {
+    width: 235px;
+    height: 50px;
+    border-radius: 50px;
+    display: block;
+    margin: 2.5rem auto;
+    color: var(--textsColor);
+    background: var(--gradient);
+    border: none;
+    cursor: pointer;
+    font-family: var(--secondaryFont);
+    font-weight: 700;
+    transition: all 0.5s ease;
+  }
+  main > :first-child button:hover {
+    background: var(--hoverElement);
+  }
+  h1 {
+    font-family: var(--secondaryFont);
+    text-align: center;
+    font-weight: 700;
+    margin: 0 auto 1rem auto;
+    line-height: 1.75rem;
+    padding: var(--gralPadding);
+    width: 75%;
+  }
+  p {
+    text-align: center;
+    padding: 0 2.25rem;
+  }
+  main > :nth-child(2) {
+    margin: var(--yMargin);
+  }
+
+  main > :nth-child(2) ul li div {
+    width: 75px;
+    height: 75px;
+    margin: 2rem auto;
+  }
+  main > :nth-child(2) ul li {
+    margin-bottom: 4rem;
+  }
+  main > :nth-child(2) ul li h3 {
+    text-align: center;
+    font-family: var(--secondaryFont);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  main > :last-child:first-child {
+    padding: var(--gralPadding);
+  }
+  main > :last-child h1 {
+    font-size: 19px;
+    width: 100%;
+    text-align: left;
+    padding: 0 1.5rem;
+  }
+  main > :last-child p {
+    text-align: left;
+    margin-bottom: 1rem;
+    padding: 0 1.5rem;
+  }
+  .specialLink {
+    width: 130px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid hsl(176, 68%, 64%);
+    padding-bottom: 0.25rem;
+    margin-left: 1.5rem;
+    transition: all ease 0.5s;
+  }
+  .specialLink:hover {
+    border-bottom: 2px solid #fff;
+  }
+
+  .specialLink a {
+    color: hsl(176, 68%, 64%);
+    font-size: 0.75rem;
+    cursor: pointer;
+  }
+  .specialLink a:hover {
+    color: #fff;
+  }
+  .specialLink div {
+    width: 15px;
+    height: 15px;
+  }
+
+  aside {
+    padding: var(--gralPadding);
+    margin: 5rem auto 0 auto;
+  }
+  #quotes {
+    position: absolute;
+    top: -1.25rem;
+    z-index: -1;
+    left: 0;
+    width: 30px;
+    height: auto;
+  }
+  .card {
+    background-color: var(--testimonialsBackground);
+    border-radius: 2%;
+    padding: var(--gralPadding);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1.5rem 0.75rem;
+    position: relative;
+  }
+  .card p {
+    width: 100%;
+    text-align: left;
+    line-height: 1.5rem;
+    margin-bottom: 0.75rem;
+    padding: 0;
+  }
+  .card div {
+    height: 48px;
+    width: 48px;
+  }
+  .card div img {
+    border-radius: 100%;
+  }
+  .card span {
+    display: block;
+    padding: 0.75rem;
+  }
+  form {
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    padding: var(--gralPadding);
+    background-color: var(--introBackground);
+    box-shadow: 5px 5px 15px -1px #000000;
+    position: relative;
+    top: 8rem;
+  }
+  form p {
+    padding: 1rem;
+  }
+  form input[type="email"] {
+    height: 50px;
+    width: 90%;
+    border-radius: 50px;
+    border: none;
+    color: grey;
+    padding-left: 1.5rem;
+    font-family: var(--mainFont);
+    margin: 1.5rem auto;
+  }
+  form button {
+    height: 50px;
+    width: 90%;
+    border-radius: 50px;
+    border: none;
+    background: var(--gradient);
+    color: var(--textsColor);
+    font-weight: 700;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+  form button:hover {
+    background: var(--hoverElement);
+  }
+
+  footer {
+    background-color: var(--footerBackground);
+    display: flex;
+    flex-direction: column;
+    padding: var(--gralPadding);
+    padding-top: 14rem;
+  }
+  footer > :first-child {
+    width: 100%;
+  }
+  footer > :first-child div {
+    width: 50%;
+  }
+  footer > :nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+  footer > :nth-child(2) p {
+    text-align: left;
+    width: 95%;
+    padding-left: 1rem;
+  }
+  .icons {
+    width: 15px;
+    height: auto;
+    margin: 0.5rem 0;
+  }
+
+  footer > :nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  footer > :nth-child(3) a {
+    width: 95%;
+    padding-left: 1rem;
+  }
+  footer nav {
+    margin-top: 2rem;
+  }
+  footer nav ul li {
+    padding: 0.5rem 0;
+  }
+  footer > :nth-child(6) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0 2rem 0;
+  }
+  .rssButton {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.25rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+  .rssButton i:hover {
+    color: var(--hoverElement);
+  }
+  .rssButton:hover {
+    border: 1px solid var(--hoverElement);
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --gralPadding: 2.5rem;
+  }
+  main > :nth-child(2) ul{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+  }
+  main > :nth-child(2) ul li {
+      width: 47%;
+  }
+  #staySection {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      align-items: center;
+  }
+  .gralPadding {
+    width: 70%;
+    grid-column: 1/2;
+    grid-row: 1/5;
     padding: 1.5rem;
+    margin: 0 auto;
+  }
+  main > :last-child h1 {
+      width: 100%;
+      padding: .5rem;
+      text-align: left;
+  }
+  main > :last-child p{
+      width: 90%;
+      padding: .5rem;
+      margin-bottom: 0;
+  }
+  .specialLink{
+      margin: .5rem;
+  }
+  footer {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items:flex-start;
+      justify-content: space-between;
+  }
+  footer > :first-child div {
+    width: 25%;
+    
 }
-.my-1{
-    margin: 1rem 0;
+    footer > :nth-child(2){
+        width: 40%;
+    }
+    footer > :nth-child(3){
+        width: 25%;
+        margin-top: 1rem;
+    }
+    footer > :nth-child(3) a {
+        width: 90%;
+    }
+    footer nav {
+        margin-top: 1rem;
+        width: 12%;
+    }
 }
-.attribution { 
-    font-size: 11px; text-align: center;
- }
-.attribution a { 
-    color: hsl(228, 45%, 44%);
- }
- @media (min-width:280px) {
-     body {
-         font-size: 14px;
-     }     
-     header {
-         width: 100%;
-         padding: var(--gralPadding);
-         background-color: var(--introBackground);
-         
-     }
-     header nav {
-         display: flex;
-         flex-direction: row;
-         justify-content: space-between;
-         align-items: center;
-     }
-     header nav div {
-         width: 30%;
-     }
-     header nav ul {
-         width: 55%;
-         display: flex;
-         flex-direction: row;
-         justify-content: space-around;
-         align-items: center;
-     }
-     header nav ul li{
-         font-family: var(--secondaryFont);
-         cursor: pointer;
-         transition: all .5s ease;         
-     }
-     header nav ul li:hover{
-        border-bottom: 1px solid #fff;         
-    }
-    header nav ul li a:hover{
-        font-weight: 700;         
-    }
-     main {
-         
-     }
-     main>:first-child {
-         
-     }
-     main>:first-child div{
-         width: 100%;       
-         padding: var(--gralPadding);
-     }
-     #shape{
-         height: 75%;
-         width: 100%;
-         position: absolute;
-         z-index: -1;
-         top:0;
-         background-color: var(--introBackground);
-         background-image: url("../images/bg-curvy-mobile.svg"); 
-         background-repeat: no-repeat;
-         background-position: bottom;
-     }   
-     main>:first-child button{
-         width: 235px;
-         height: 50px;
-         border-radius: 50px;
-         display: block;
-         margin: 2.5rem auto;
-         color: var(--textsColor);
-         background: var(--gradient);
-         border: none;
-         cursor: pointer;
-         font-family: var(--secondaryFont);
-         font-weight: 700;
-         transition: all .5s ease;
-     }
-     main>:first-child button:hover{
-         background: var(--hoverElement);
-     }
-     h1{
-         font-family: var(--secondaryFont);
-         text-align: center;
-         font-weight: 700;
-         margin-bottom: 1rem;
-         line-height: 1.75rem;
-         padding: var(--gralPadding);
-     }
-     p {
-         text-align: center;
-         padding: 0 2.25rem;
-     }
-     main>:nth-child(2){
-         margin: var(--yMargin);
-     }
-
-     main>:nth-child(2) ul li div {
-         width: 75px;
-         height: 75px;
-         margin: 2rem auto;
-     }
-     main>:nth-child(2) ul li{
-         margin-bottom: 4rem; 
-     }
-     main>:nth-child(2) ul li h3 {
-         text-align: center;
-         font-family: var(--secondaryFont);
-         text-align: center;
-         font-weight: 700;
-         margin-bottom: 1rem;
-     }
-    main>:last-child:first-child{
+@media (min-width: 1280px) {
+    :root {
+        --gralPadding: 3rem;
+      }
+      header nav div {
+        width: 17%;
+      }
+      header nav ul {
+        width: 25%;
+        justify-content: space-between;
+      }
+      main > :first-child div {
+        width: 50%;
         padding: var(--gralPadding);
+        margin: 0 auto;
     }
-     main>:last-child h1{
-         font-size: 19px;         
-     }
-     main>:last-child p {
-         text-align: left;
-         margin-bottom: 1rem;
-     }
-     .specialLink {
-         width: 130px;
-         justify-content: space-between;
-         align-items: center;
-         display: flex;
-         flex-direction: row;
-         border-bottom: 2px solid hsl(176, 68%, 64%);
-         padding-bottom: .25rem;
-         margin-left: 2rem;
-         transition: all ease .5s;
-     }
-     .specialLink:hover {
-         border-bottom: 2px solid #fff;
-     }
-
-     .specialLink a {
-         color: hsl(176, 68%, 64%);
-         font-size: .75rem;
-         cursor: pointer;
-     }
-     .specialLink a:hover {
-        color: #fff;
+    h1{
+        margin: 0 auto;
+        width: 40%;
     }
-     .specialLink div {
-         width: 15px;
-         height: 15px;
-     }
-     
-     aside{
-         padding: var(--gralPadding);
-         margin: 5rem auto 0 auto;
-     }
-     #quotes{
-         position: absolute;
-         top: -1.25rem;
-         z-index: -1;
-         left: 0;
-         width: 30px;
-         height: auto;
-     }
-     .card {
-         background-color: var(--testimonialsBackground);
-         border-radius: 2%;
-         padding: var(--gralPadding);
-         display: flex;
-         flex-direction: row;
-         flex-wrap: wrap;
-         justify-content: flex-start;
-         align-items: center;
-         margin: 1.5rem .75rem;
-         position: relative;
-     }
-     .card p {
-         width: 100%;
-         text-align: left;
-         line-height: 1.5rem;
-         margin-bottom: .75rem;
-         padding: 0;
-     }
-     .card div {
-         height: 48px;
-         width: 48px;         
-     }
-     .card div img {
-         border-radius: 100%;
-     }
-     .card span{
-         display: block;
-         padding: .75rem;
-     }
-     form {        
-        border-radius: 5%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    #staySection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
         align-items: center;
-        text-align: center;
-        margin: 0 auto 0 auto;
         padding: var(--gralPadding);
-        background-color: var(--introBackground);
-        box-shadow: 5px 5px 15px -1px #000000;
-        position: relative;
-        top: 8rem;     
-     }
-     form p {
-         padding: 1rem;
-     }
-     form input[type=email]{
-         height: 50px;
-         width: 90%;
-         border-radius: 50px;
-         border:none;
-         color: grey;
-         padding-left: 1.5rem;
-         font-family: var(--mainFont);
-         margin: 1.5rem auto;
-     }
-     form button {
-         height: 50px;
-         width: 90%;
-         border-radius: 50px;
-         border:none;
-         background: var(--gradient);
-         color: var(--textsColor);
-         font-weight: 700;
-         transition: all .5s ease;
-         cursor: pointer;
-     }
-     form button:hover{
-         background: var(--hoverElement);
-     }
-     
-     footer {
-         background-color: var(--footerBackground);
-         display: flex;
-         flex-direction: column;
-         padding: var(--gralPadding);
-         padding-top: 14rem;       
-     }
-     footer>:first-child{
-         width: 100%;         
-     }
-     footer>:first-child div{
-         width: 50%;         
-     }
-     footer>:nth-child(2){
-         width: 100%;
-         display: flex;
-         flex-direction: row;
-         flex-wrap: nowrap;
-         justify-content: space-between;
-     }
-     footer>:nth-child(2) p {
-        text-align: left;
-        width: 95% ;
-        padding-left: 1rem;
     }
-    .icons {
-        width: 15px;
-        height: auto;
-        margin: .5rem 0;                      
+    .gralPadding{
+        width: 100%;
+        grid-column: 1/2;        
+        padding: 1.5rem;
+        margin: 0 auto;
     }
-   
-    footer>:nth-child(3){
+    aside {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-around;
     }
-    footer>:nth-child(3) a {
-        width: 95%;
-        padding-left: 1rem;
+    .card {
+        width: 30%;
+    }
+    #quotes {
+        width: 60px;
+        top:-2.5rem;
+        left: -1rem;
+    }
+    form{
+        width: 60%;
+    }
+    form h1{
+        width: 100%;
+        padding: 0;
+    }
+    footer > :first-child div {
+        width: 15%;
+    }
+    footer > :nth-child(2) {
+        width: 30%;
+    }
+    footer > :nth-child(3) {
+        width: 20%;
+        margin-top: 1rem;
     }
     footer nav {
-        margin-top: 2rem;
+        width: 10%;
     }
-    footer nav ul li {
-        padding: .5rem 0;
+    footer > :nth-child(6) {
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0;
     }
-    footer>:nth-child(6){
-        display: flex;
-        flex-direction: row;
+    
+}
+@media (min-width:1440px){
+    :root{
+        --gralPadding: 6rem;
+    }
+    header nav div {
+        width: 13%;
+    }
+    h1 {
+        margin: 0 auto;
+        width: 25%;
+        padding: 3rem 0;
+    }
+    main > :first-child div {
+        width: 50%;        
+        margin: 0 auto;
+        padding: 0;
+    }
+    p {
+        width: 30%;
+        text-align: center;       
+        margin: 0 auto;
+    }
+    main > :nth-child(2) ul {
+        justify-content: center;
+    }
+    main > :nth-child(2) ul li {
+        width: 35%;
+    }
+    main > :nth-child(2) ul li p {
+        width: 82%;
+    }
+    #staySection {
+        padding: 1rem 6rem;
+    }
+    main > :last-child p {
         width: 100%;
-        justify-content: center;
-        align-items: center;
-        margin: 4rem 0 2rem 0;
     }
-    .rssButton {
-        width: 30px;
-        height: 30px;
-        border-radius: 100%;
-        border: 1px solid #fff;
-        display: flex;
+    aside {
         justify-content: center;
-        align-items: center;
-        margin: 0 .25rem;
-        transition: all .5s ease;
-        cursor: pointer;        
     }
-    .rssButton i:hover {
-        color: var(--hoverElement);
-    }    
-    .rssButton:hover {
-        border: 1px solid var(--hoverElement);
-    }     
- }
+    .card {
+        width: 30%;
+        margin: 0 1.25rem;
+        padding: 4rem 3rem 3rem 3rem;
+    }
+    form {
+        width: 70%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        top: 14rem;
+    }
+    form p {
+        width: 100%;
+    }
+    form input[type="email"]{
+        width: 65%;
+    }
+    form button {
+        width: 30%;
+    }
+    footer > :first-child div {
+        width: 13%;
+    }
+    footer > :nth-child(6) {
+        width: 10%;
+        justify-content: flex-end;
+        margin: 1rem 0;
+    }
+    .attribution {
+        margin-top: 4rem;
+    }
+}
