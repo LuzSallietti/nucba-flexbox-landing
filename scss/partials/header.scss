@@ -1,0 +1,46 @@
+@media (min-width: 320px) {
+  header {
+    width: 100%;
+    padding: var(--gralPadding);
+    background-color: var(--introBackground);
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      div {
+        width: 30%;
+        @media (min-width: 1280px) {
+          width: 17%;
+        }
+        @media (min-width: 1440px){
+          width: 13%;
+        }
+      }
+      ul {
+        width: 55%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        @media (min-width: 1280px) {
+          width: 25%;
+          justify-content: space-between;
+        }
+        li {
+          font-family: var(--secondaryFont);
+          cursor: pointer;
+          transition: all 0.5s ease;
+          &:hover {
+            border-bottom: 1px solid #fff;
+          }
+          a {
+            &:hover {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+}

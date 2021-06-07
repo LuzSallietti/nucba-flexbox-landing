@@ -1,0 +1,801 @@
+:root {
+  --introBackground: hsl(217, 28%, 15%);
+  --mainBackground: hsl(218, 28%, 13%);
+  --footerBackground: hsl(216, 53%, 9%);
+  --testimonialsBackground: hsl(219, 30%, 18%);
+  --mainFont: "Open Sans", sans-serif;
+  --secondaryFont: "Raleway", sans-serif;
+  --textsColor: hsl(0, 0%, 100%);
+  --gralPadding: 1.5rem;
+  --gradient: linear-gradient(
+    90deg,
+    rgba(100, 225, 217, 1) 0%,
+    rgba(51, 158, 204, 1) 100%
+  );
+  --yMargin: 7rem auto;
+  --hoverElement: hsl(176, 68%, 64%);
+}
+@media (min-width: 768px) {
+  :root {
+    --gralPadding: 2.5rem;
+  }
+}
+@media (min-width: 1280px) {
+  :root {
+    --gralPadding: 3rem;
+  }
+}
+@media (min-width: 1440px) {
+  :root {
+    --gralPadding: 6rem;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-weight: normal;
+}
+
+* img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: var(--mainFont);
+  color: var(--textsColor);
+  background-color: var(--mainBackground);
+  font-size: 14px;
+  animation: opacity 3s ease 1;
+}
+
+a {
+  color: var(--textsColor);
+}
+
+h1 {
+  font-family: var(--secondaryFont);
+}
+
+strong {
+  font-weight: bold;
+}
+
+.gralPadding {
+  padding: 1.5rem;
+}
+
+.my-1 {
+  margin: 1rem 0;
+}
+
+@media (min-width: 320px) {
+  header {
+    width: 100%;
+    padding: var(--gralPadding);
+    background-color: var(--introBackground);
+  }
+  header nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header nav div {
+    width: 30%;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  header nav div {
+    width: 17%;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  header nav div {
+    width: 13%;
+  }
+}
+@media (min-width: 320px) {
+  header nav ul {
+    width: 55%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  header nav ul {
+    width: 25%;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 320px) {
+  header nav ul li {
+    font-family: var(--secondaryFont);
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  header nav ul li:hover {
+    border-bottom: 1px solid #fff;
+  }
+  header nav ul li a:hover {
+    font-weight: 700;
+  }
+}
+@media (min-width: 320px) {
+  main > :first-child div {
+    width: 100%;
+    padding: var(--gralPadding);
+    animation: appear 5s ease 1;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  main > :first-child div {
+    width: 50%;
+    padding: var(--gralPadding);
+    margin: 0 auto;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  main > :first-child div {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+@media (min-width: 320px) {
+  main > :first-child button {
+    width: 235px;
+    height: 50px;
+    border-radius: 50px;
+    display: block;
+    margin: 2.5rem auto;
+    color: var(--textsColor);
+    background: var(--gradient);
+    border: none;
+    cursor: pointer;
+    font-family: var(--secondaryFont);
+    font-weight: 700;
+    transition: all 0.5s ease;
+    animation: special_link 4s ease 0s infinite alternate;
+  }
+  main > :first-child button:hover {
+    background: var(--hoverElement);
+  }
+}
+@media (min-width: 320px) {
+  main h1 {
+    font-family: var(--secondaryFont);
+    text-align: center;
+    font-weight: 700;
+    margin: 0 auto 1rem auto;
+    line-height: 1.75rem;
+    padding: var(--gralPadding);
+    width: 75%;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  main h1 {
+    margin: 0 auto;
+    width: 40%;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  main h1 {
+    margin: 0 auto;
+    width: 25%;
+    padding: 3rem 0;
+  }
+}
+@media (min-width: 320px) {
+  main p {
+    text-align: center;
+    padding: 0 2.25rem;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  main p {
+    width: 30%;
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 320px) {
+  main > :nth-child(2) {
+    margin: var(--yMargin);
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  main > :nth-child(2) ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) and (min-width: 1440px) {
+  main > :nth-child(2) ul {
+    justify-content: center;
+  }
+}
+@media (min-width: 320px) {
+  main > :nth-child(2) ul li {
+    margin-bottom: 4rem;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  main > :nth-child(2) ul li {
+    width: 47%;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  main > :nth-child(2) ul li {
+    width: 35%;
+  }
+}
+@media (min-width: 320px) {
+  main > :nth-child(2) ul li h3 {
+    text-align: center;
+    font-family: var(--secondaryFont);
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+}
+@media (min-width: 320px) {
+  main > :nth-child(2) ul li div {
+    width: 75px;
+    height: 75px;
+    margin: 2rem auto;
+    animation: appear_left 8s ease 1;
+  }
+  main > :nth-child(2) ul li div img {
+    animation: shine 3s ease 2s infinite alternate-reverse;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  main > :nth-child(2) ul li p {
+    width: 82%;
+  }
+}
+@media (min-width: 320px) {
+  main > :last-child > :first-child {
+    padding: var(--gralPadding);
+    animation: shine 3s ease 0s infinite alternate;
+  }
+  main > :last-child h1 {
+    font-size: 19px;
+    width: 100%;
+    text-align: left;
+    padding: 0 1.5rem;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  main > :last-child h1 {
+    width: 100%;
+    padding: 0.5rem;
+    text-align: left;
+  }
+}
+@media (min-width: 320px) {
+  main > :last-child p {
+    text-align: left;
+    margin-bottom: 1rem;
+    padding: 0 1.5rem;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  main > :last-child p {
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 0;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  main > :last-child p {
+    width: 100%;
+  }
+}
+@media (min-width: 320px) {
+  #shape {
+    height: 75%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    background-color: var(--introBackground);
+    background-image: url("../images/bg-curvy-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  #shape {
+    height: 100%;
+    background-image: url("../images/bg-curvy-desktop.svg");
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  #staySection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) and (min-width: 1280px) {
+  #staySection {
+    padding: var(--gralPadding);
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) and (min-width: 1440px) {
+  #staySection {
+    padding: 1rem 6rem;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  .gralPadding {
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/5;
+    padding: 1.5rem;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 320px) {
+  .specialLink {
+    width: 130px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid #65e2d9;
+    padding-bottom: 0.25rem;
+    margin-left: 1.5rem;
+    transition: all ease 0.5s;
+    animation: special_link 2s ease 0s infinite alternate;
+  }
+  .specialLink:hover {
+    border-bottom: 2px solid #fff;
+  }
+  .specialLink a {
+    color: #65e2d9;
+    font-size: 0.75rem;
+    cursor: pointer;
+  }
+  .specialLink a:hover {
+    color: #fff;
+  }
+  .specialLink div {
+    width: 15px;
+    height: 15px;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  .specialLink {
+    margin: 0.5rem;
+  }
+}
+@media (min-width: 320px) {
+  aside {
+    padding: var(--gralPadding);
+    margin: 5rem auto 0 auto;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  aside {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  aside {
+    justify-content: center;
+  }
+}
+@media (min-width: 320px) {
+  #quotes {
+    position: absolute;
+    top: -1.25rem;
+    z-index: -1;
+    left: 0;
+    width: 30px;
+    height: auto;
+    animation: shine 2s ease 0s infinite alternate;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  #quotes {
+    width: 60px;
+    top: -2.5rem;
+    left: -1rem;
+  }
+}
+@media (min-width: 320px) {
+  .card {
+    background-color: var(--testimonialsBackground);
+    border-radius: 2%;
+    padding: var(--gralPadding);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1.5rem 0.75rem;
+    position: relative;
+    animation: cards 3s ease 1;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  .card {
+    width: 30%;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  .card {
+    margin: 0 1.25rem;
+    padding: 4rem 3rem 3rem 3rem;
+  }
+}
+@media (min-width: 320px) {
+  .card p {
+    width: 100%;
+    text-align: left;
+    line-height: 1.5rem;
+    margin-bottom: 0.75rem;
+    padding: 0;
+  }
+}
+@media (min-width: 320px) {
+  .card div {
+    height: 48px;
+    width: 48px;
+  }
+  .card div img {
+    border-radius: 100%;
+  }
+}
+@media (min-width: 320px) {
+  .card span {
+    display: block;
+    padding: 0.75rem;
+  }
+}
+@media (min-width: 320px) {
+  form {
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    padding: var(--gralPadding);
+    background-color: var(--introBackground);
+    box-shadow: 5px 5px 15px -1px #000000;
+    position: relative;
+    top: 8rem;
+  }
+  form h1 {
+    font-weight: 700;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  form {
+    width: 60%;
+  }
+  form h1 {
+    width: 100%;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  form {
+    width: 70%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    top: 14rem;
+  }
+}
+@media (min-width: 320px) {
+  form p {
+    padding: 1rem;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  form p {
+    width: 100%;
+  }
+}
+@media (min-width: 320px) {
+  form input[type=email] {
+    height: 50px;
+    width: 90%;
+    border-radius: 50px;
+    border: none;
+    color: grey;
+    padding-left: 1.5rem;
+    font-family: var(--mainFont);
+    margin: 1.5rem auto;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  form input[type=email] {
+    width: 65%;
+  }
+}
+@media (min-width: 320px) {
+  form button {
+    height: 50px;
+    width: 90%;
+    border-radius: 50px;
+    border: none;
+    background: var(--gradient);
+    color: var(--textsColor);
+    font-weight: 700;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    animation: special_link 4s ease 0s infinite alternate;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  form button {
+    width: 30%;
+  }
+}
+@media (min-width: 320px) {
+  form button:hover {
+    background: var(--hoverElement);
+  }
+}
+@media (min-width: 320px) {
+  footer {
+    background-color: var(--footerBackground);
+    display: flex;
+    flex-direction: column;
+    padding: var(--gralPadding);
+    padding-top: 14rem;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 320px) {
+  footer > :first-child {
+    width: 100%;
+  }
+  footer > :first-child div {
+    width: 50%;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  footer > :first-child div {
+    width: 25%;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  footer > :first-child div {
+    width: 15%;
+  }
+}
+@media (min-width: 320px) and (min-width: 1440px) {
+  footer > :first-child div {
+    width: 13%;
+  }
+}
+@media (min-width: 320px) {
+  footer > :nth-child(2) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  footer > :nth-child(2) {
+    width: 40%;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  footer > :nth-child(2) {
+    width: 30%;
+  }
+}
+@media (min-width: 320px) {
+  footer > :nth-child(2) p {
+    text-align: left;
+    width: 95%;
+    padding: 0 1.5rem 0 1rem;
+  }
+}
+@media (min-width: 320px) {
+  footer > :nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  footer > :nth-child(3) {
+    width: 25%;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  footer > :nth-child(3) {
+    width: 20%;
+    margin-top: 1rem;
+  }
+}
+@media (min-width: 320px) {
+  footer > :nth-child(3) a {
+    width: 95%;
+    padding-left: 1rem;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  footer > :nth-child(3) a {
+    width: 90%;
+  }
+}
+@media (min-width: 320px) {
+  footer nav {
+    margin-top: 2rem;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  footer nav {
+    margin-top: 1rem;
+    width: 12%;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  footer nav {
+    width: 10%;
+  }
+}
+@media (min-width: 320px) {
+  footer nav ul li {
+    padding: 0.5rem 0;
+  }
+}
+@media (min-width: 320px) {
+  footer > :nth-child(6) {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 4rem 0 2rem 0;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  footer > :nth-child(6) {
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+  }
+}
+@media (min-width: 320px) and (mon-width: 1440px) {
+  footer > :nth-child(6) {
+    width: 10%;
+    justify-content: flex-end;
+    margin: 1rem 0;
+  }
+}
+@media (min-width: 320px) {
+  .icons {
+    width: 15px;
+    height: auto;
+    margin: 0.5rem 0;
+  }
+}
+@media (min-width: 320px) {
+  .rssButton {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    border: 1px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.25rem;
+    transition: all 0.5s ease;
+    cursor: pointer;
+  }
+  .rssButton i:hover {
+    color: var(--hoverElement);
+  }
+  .rssButton:hover {
+    border: 1px solid var(--hoverElement);
+  }
+}
+@media (min-width: 320px) {
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  .attribution {
+    margin-top: 4rem;
+  }
+}
+@media (min-width: 320px) {
+  .attribution a {
+    color: #3e52a3;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes shine {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes appear_left {
+  from {
+    transform: translateX(-600%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes special_link {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes cards {
+  from {
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

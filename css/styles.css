@@ -95,6 +95,7 @@ strong {
     width: 100%;
     padding: var(--gralPadding);
   }
+  /*review*/
   #shape {
     height: 75%;
     width: 100%;
@@ -137,6 +138,7 @@ strong {
     padding: 0 2.25rem;
   }
   main > :nth-child(2) {
+      /*review*/
     margin: var(--yMargin);
   }
 
@@ -169,6 +171,7 @@ strong {
     margin-bottom: 1rem;
     padding: 0 1.5rem;
   }
+  /*review*/
   .specialLink {
     width: 130px;
     justify-content: space-between;
@@ -201,6 +204,7 @@ strong {
     padding: var(--gralPadding);
     margin: 5rem auto 0 auto;
   }
+  /*review*/
   #quotes {
     position: absolute;
     top: -1.25rem;
@@ -209,6 +213,7 @@ strong {
     width: 30px;
     height: auto;
   }
+  /*review*/
   .card {
     background-color: var(--testimonialsBackground);
     border-radius: 2%;
@@ -376,6 +381,7 @@ strong {
       grid-template-rows: auto;
       align-items: center;
   }
+  /*review the name!*/
   .gralPadding {
     width: 70%;
     grid-column: 1/2;
@@ -388,7 +394,7 @@ strong {
       padding: .5rem;
       text-align: left;
   }
-  main > :last-child p{
+  main > :last-child p {
       width: 90%;
       padding: .5rem;
       margin-bottom: 0;
@@ -470,7 +476,7 @@ strong {
         top:-2.5rem;
         left: -1rem;
     }
-    form{
+    form {
         width: 60%;
     }
     form h1{

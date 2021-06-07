@@ -1,0 +1,208 @@
+@media (min-width: 320px) {
+  main {
+    & > :first-child {
+      div {
+        width: 100%;
+        padding: var(--gralPadding);
+        animation: appear 5s ease 1;
+        @media (min-width:1280px) {
+          width: 50%;
+          padding: var(--gralPadding);
+          margin: 0 auto;          
+        }
+        @media (min-width:1440px){
+          width: 50%;        
+          margin: 0 auto;
+          padding: 0;
+        }
+      }
+      button {
+        width: 235px;
+        height: 50px;
+        border-radius: 50px;
+        display: block;
+        margin: 2.5rem auto;
+        color: var(--textsColor);
+        background: var(--gradient);
+        border: none;
+        cursor: pointer;
+        font-family: var(--secondaryFont);
+        font-weight: 700;
+        transition: all 0.5s ease;
+        animation: special_link 4s ease 0s infinite alternate;
+        &:hover {
+          background: var(--hoverElement);
+        }
+      }
+    }
+    h1 {
+      font-family: var(--secondaryFont);
+      text-align: center;
+      font-weight: 700;
+      margin: 0 auto 1rem auto;
+      line-height: 1.75rem;
+      padding: var(--gralPadding);
+      width: 75%;
+      @media (min-width:1280px) {
+        margin: 0 auto;
+        width: 40%;        
+      }
+      @media (min-width: 1440px){
+        margin: 0 auto;
+        width: 25%;
+        padding: 3rem 0;
+      }
+    }
+    p {
+      text-align: center;
+      padding: 0 2.25rem;
+      @media (min-width:1440px){
+        width: 30%;
+        text-align: center;       
+        margin: 0 auto;
+      }
+    }
+    & > :nth-child(2) {
+      margin: var(--yMargin);
+      ul {
+        @media (min-width: 768px) {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-items: center;
+          @media (min-width:1440px){
+            justify-content: center;
+          }
+        }
+        li {
+          margin-bottom: 4rem;
+          @media (min-width: 768px) {
+            width: 47%;
+          }
+          @media (min-width:1440px){
+            width: 35%;
+          }
+          h3 {
+            text-align: center;
+            font-family: var(--secondaryFont);
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 1rem;
+          }
+          div {
+            width: 75px;
+            height: 75px;
+            margin: 2rem auto;
+            animation: appear_left 8s ease  1;
+            img{
+              animation: shine 3s ease 2s infinite alternate-reverse;
+            }
+          }
+          p {
+            @media (min-width:1440px){
+              width: 82%;
+            }
+          }
+        }
+      }
+    }
+    & > :last-child {
+      & > :first-child {
+        padding: var(--gralPadding);
+        animation: shine 3s ease 0s infinite alternate;
+      }
+      h1 {
+        font-size: 19px;
+        width: 100%;
+        text-align: left;
+        padding: 0 1.5rem;
+        @media (min-width: 768px) {
+          width: 100%;
+          padding: 0.5rem;
+          text-align: left;
+        }
+      }
+      p {
+        text-align: left;
+        margin-bottom: 1rem;
+        padding: 0 1.5rem;
+        @media (min-width: 768px) {
+          width: 90%;
+          padding: 0.5rem;
+          margin-bottom: 0;
+        }
+        @media (min-width:1440px){
+          width: 100%;
+        }
+      }
+    }
+  }
+  #shape {
+    height: 75%;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    background-color: var(--introBackground);
+    background-image: url("../images/bg-curvy-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    @media (min-width:1440px){
+      height: 100%;
+      background-image: url("../images/bg-curvy-desktop.svg");
+    }
+  }
+  @media (min-width: 768px) {
+    #staySection {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      align-items: center;
+      @media (min-width:1280px) {
+        padding: var(--gralPadding);        
+      }
+      @media (min-width:1440px){
+        padding: 1rem 6rem;
+      }
+    }
+    .gralPadding {
+      width: 100%;
+      grid-column: 1/2;
+      grid-row: 1/5;
+      padding: 1.5rem;
+      margin: 0 auto;
+    }
+  }
+  .specialLink {
+    width: 130px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    border-bottom: 2px solid hsl(176, 68%, 64%);
+    padding-bottom: 0.25rem;
+    margin-left: 1.5rem;
+    transition: all ease 0.5s;
+    animation: special_link 2s ease 0s infinite alternate;
+
+    &:hover {
+      border-bottom: 2px solid #fff;
+    }
+    a {
+      color: hsl(176, 68%, 64%);
+      font-size: 0.75rem;
+      cursor: pointer;
+      &:hover {
+        color: #fff;
+      }
+    }
+    div {
+      width: 15px;
+      height: 15px;
+    }
+    @media (min-width: 768px) {
+      margin: 0.5rem;
+    }
+  }
+}

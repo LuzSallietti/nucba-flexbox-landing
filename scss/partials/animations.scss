@@ -1,0 +1,53 @@
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: scale(0.75);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);        
+        
+    }    
+}
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes shine {
+    from {
+        opacity: .5;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes appear_left {
+    from {
+       transform: translateX(-600%);
+    }
+    to {
+       transform: translateX(0);
+    }
+}
+@keyframes special_link {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+}
+@keyframes cards {
+    from {
+        transform: rotate(180deg);
+        opacity: 0;
+    }
+    to {
+        transform: rotate(0);
+        opacity: 1;
+    }    
+}

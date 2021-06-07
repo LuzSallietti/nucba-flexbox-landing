@@ -1,0 +1,68 @@
+@media (min-width: 320px) {
+  aside {
+    padding: var(--gralPadding);
+    margin: 5rem auto 0 auto;
+    @media (min-width: 1280px) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+    @media (min-width: 1440px) {
+      justify-content: center;
+    }
+  }
+  #quotes {
+    position: absolute;
+    top: -1.25rem;
+    z-index: -1;
+    left: 0;
+    width: 30px;
+    height: auto;
+    animation: shine 2s ease 0s infinite alternate;
+    @media (min-width: 1280px) {
+      width: 60px;
+      top: -2.5rem;
+      left: -1rem;
+    }
+  }
+  .card {
+    background-color: var(--testimonialsBackground);
+    border-radius: 2%;
+    padding: var(--gralPadding);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1.5rem 0.75rem;
+    position: relative;
+    animation: cards 3s ease 1;
+    @media (min-width: 1280px) {
+      width: 30%;
+    }
+    @media (min-width: 1440px) {
+      margin: 0 1.25rem;
+      padding: 4rem 3rem 3rem 3rem;
+    }
+    p {
+      width: 100%;
+      text-align: left;
+      line-height: 1.5rem;
+      margin-bottom: 0.75rem;
+      padding: 0;
+    }
+    div {
+      height: 48px;
+      width: 48px;
+      img {
+        border-radius: 100%;
+      }
+    }
+    span {
+      display: block;
+      padding: 0.75rem;
+    }
+  }
+}

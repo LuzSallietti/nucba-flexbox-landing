@@ -1,0 +1,61 @@
+:root {
+  --introBackground: hsl(217, 28%, 15%);
+  --mainBackground: hsl(218, 28%, 13%);
+  --footerBackground: hsl(216, 53%, 9%);
+  --testimonialsBackground: hsl(219, 30%, 18%);
+  --mainFont: "Open Sans", sans-serif;
+  --secondaryFont: "Raleway", sans-serif;
+  --textsColor: hsl(0, 0%, 100%);
+  --gralPadding: 1.5rem;
+  @media (min-width: 768px) {
+    --gralPadding: 2.5rem;
+  }
+  @media (min-width: 1280px) {
+    --gralPadding: 3rem;
+  }
+  @media (min-width: 1440px) {
+    --gralPadding: 6rem;
+  }
+  --gradient: linear-gradient(
+    90deg,
+    rgba(100, 225, 217, 1) 0%,
+    rgba(51, 158, 204, 1) 100%
+  );
+  --yMargin: 7rem auto;
+  --hoverElement: hsl(176, 68%, 64%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-weight: normal;
+}
+* img {
+  width: 100%;
+  height: auto;
+}
+body {
+  font-family: var(--mainFont);
+  color: var(--textsColor);
+  background-color: var(--mainBackground);
+  font-size: 14px;
+  animation: opacity 3s ease 1;
+}
+a {
+  color: var(--textsColor);
+}
+h1 {
+  font-family: var(--secondaryFont);
+}
+strong {
+  font-weight: bold;
+}
+.gralPadding {
+  padding: 1.5rem;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+
