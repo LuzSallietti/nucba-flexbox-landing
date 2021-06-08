@@ -65,23 +65,17 @@ strong {
   font-weight: bold;
 }
 
-.gralPadding {
-  padding: 1.5rem;
-}
-
-.my-1 {
-  margin: 1rem 0;
-}
-
 @media (min-width: 320px) {
   header {
     width: 100%;
+    height: auto;
     padding: var(--gralPadding);
     background-color: var(--introBackground);
   }
   header nav {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
   }
@@ -104,6 +98,7 @@ strong {
     width: 55%;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-around;
     align-items: center;
   }
@@ -243,15 +238,14 @@ strong {
   main > :nth-child(2) ul li h3 {
     text-align: center;
     font-family: var(--secondaryFont);
-    text-align: center;
     font-weight: 700;
     margin-bottom: 1rem;
   }
 }
 @media (min-width: 320px) {
   main > :nth-child(2) ul li div {
-    width: 75px;
     height: 75px;
+    width: 75px;
     margin: 2rem auto;
     animation: appear_left 8s ease 1;
   }
@@ -265,10 +259,77 @@ strong {
   }
 }
 @media (min-width: 320px) {
-  main > :last-child > :first-child {
+  main > :last-child div:first-of-type {
     padding: var(--gralPadding);
     animation: shine 3s ease 0s infinite alternate;
   }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  main > :last-child div:first-of-type {
+    width: 100%;
+    grid-column: 1/2;
+    grid-row: 1/5;
+    padding: 1.5rem;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 320px) {
+  main > :last-child div:last-of-type {
+    width: 130px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #65e2d9;
+    padding-bottom: 0.25rem;
+    margin-left: 1.5rem;
+    transition: all ease 0.5s;
+    animation: special_link 2s ease 0s infinite alternate;
+  }
+  main > :last-child div:last-of-type:hover {
+    border-bottom: 2px solid #fff;
+  }
+  main > :last-child div:last-of-type a {
+    color: #65e2d9;
+    font-size: 0.75rem;
+    cursor: pointer;
+  }
+  main > :last-child div:last-of-type a:hover {
+    color: #fff;
+  }
+  main > :last-child div:last-of-type div {
+    height: 15px;
+    width: 15px;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  main > :last-child div:last-of-type {
+    margin: 0.5rem;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) {
+  main > :last-child {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    align-items: center;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) and (min-width: 1280px) {
+  main > :last-child {
+    padding: var(--gralPadding);
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) and (min-width: 1440px) {
+  main > :last-child {
+    padding: 1rem 6rem;
+  }
+}
+@media (min-width: 320px) {
   main > :last-child h1 {
     font-size: 19px;
     width: 100%;
@@ -304,8 +365,8 @@ strong {
 }
 @media (min-width: 320px) {
   #shape {
-    height: 75%;
     width: 100%;
+    height: 75%;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -321,67 +382,6 @@ strong {
     background-image: url("../images/bg-curvy-desktop.svg");
   }
 }
-@media (min-width: 320px) and (min-width: 768px) {
-  #staySection {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    align-items: center;
-  }
-}
-@media (min-width: 320px) and (min-width: 768px) and (min-width: 1280px) {
-  #staySection {
-    padding: var(--gralPadding);
-  }
-}
-@media (min-width: 320px) and (min-width: 768px) and (min-width: 1440px) {
-  #staySection {
-    padding: 1rem 6rem;
-  }
-}
-@media (min-width: 320px) and (min-width: 768px) {
-  .gralPadding {
-    width: 100%;
-    grid-column: 1/2;
-    grid-row: 1/5;
-    padding: 1.5rem;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 320px) {
-  .specialLink {
-    width: 130px;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    border-bottom: 2px solid #65e2d9;
-    padding-bottom: 0.25rem;
-    margin-left: 1.5rem;
-    transition: all ease 0.5s;
-    animation: special_link 2s ease 0s infinite alternate;
-  }
-  .specialLink:hover {
-    border-bottom: 2px solid #fff;
-  }
-  .specialLink a {
-    color: #65e2d9;
-    font-size: 0.75rem;
-    cursor: pointer;
-  }
-  .specialLink a:hover {
-    color: #fff;
-  }
-  .specialLink div {
-    width: 15px;
-    height: 15px;
-  }
-}
-@media (min-width: 320px) and (min-width: 768px) {
-  .specialLink {
-    margin: 0.5rem;
-  }
-}
 @media (min-width: 320px) {
   aside {
     padding: var(--gralPadding);
@@ -393,31 +393,13 @@ strong {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
   }
 }
 @media (min-width: 320px) and (min-width: 1440px) {
   aside {
     justify-content: center;
-  }
-}
-@media (min-width: 320px) {
-  #quotes {
-    position: absolute;
-    top: -1.25rem;
-    z-index: -1;
-    left: 0;
-    width: 30px;
-    height: auto;
-    animation: shine 2s ease 0s infinite alternate;
-  }
-}
-@media (min-width: 320px) and (min-width: 1280px) {
-  #quotes {
-    width: 60px;
-    top: -2.5rem;
-    left: -1rem;
   }
 }
 @media (min-width: 320px) {
@@ -433,6 +415,22 @@ strong {
     margin: 1.5rem 0.75rem;
     position: relative;
     animation: cards 3s ease 20s 1;
+  }
+  .card:first-of-type div:first-of-type {
+    position: absolute;
+    top: -1.25rem;
+    z-index: -1;
+    left: 0;
+    width: 30px;
+    height: auto;
+    animation: shine 2s ease 0s infinite alternate;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  .card:first-of-type div:first-of-type {
+    width: 60px;
+    top: -2.5rem;
+    left: -1rem;
   }
 }
 @media (min-width: 320px) and (min-width: 1280px) {
@@ -459,6 +457,7 @@ strong {
   .card div {
     height: 48px;
     width: 48px;
+    border-radius: 100%;
   }
   .card div img {
     border-radius: 100%;
@@ -475,6 +474,7 @@ strong {
     border-radius: 5%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -517,8 +517,8 @@ strong {
 }
 @media (min-width: 320px) {
   form input[type=email] {
-    height: 50px;
     width: 90%;
+    height: 50px;
     border-radius: 50px;
     border: none;
     color: grey;
@@ -534,8 +534,8 @@ strong {
 }
 @media (min-width: 320px) {
   form button {
-    height: 50px;
     width: 90%;
+    height: 50px;
     border-radius: 50px;
     border: none;
     background: var(--gradient);
@@ -561,6 +561,9 @@ strong {
     background-color: var(--footerBackground);
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: unset;
     padding: var(--gralPadding);
     padding-top: 14rem;
   }
@@ -570,8 +573,8 @@ strong {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 @media (min-width: 320px) {
@@ -599,11 +602,13 @@ strong {
 }
 @media (min-width: 320px) {
   footer > :nth-child(2) {
+    margin: 1rem 0;
     width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: flex-start;
   }
 }
 @media (min-width: 320px) and (min-width: 768px) {
@@ -680,17 +685,16 @@ strong {
   footer > :nth-child(6) {
     display: flex;
     flex-direction: row;
-    width: 100%;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    width: 100%;
     margin: 4rem 0 2rem 0;
   }
 }
 @media (min-width: 320px) and (min-width: 1280px) {
   footer > :nth-child(6) {
     width: 30%;
-    justify-content: center;
-    align-items: center;
     margin: 1rem 0;
   }
 }
@@ -702,6 +706,23 @@ strong {
   }
 }
 @media (min-width: 320px) {
+  footer > :nth-child(7) {
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+  }
+}
+@media (min-width: 320px) and (min-width: 1280px) {
+  footer > :nth-child(7) {
+    margin-top: 4rem;
+  }
+}
+@media (min-width: 320px) {
+  footer > :nth-child(7) a {
+    color: #3e52a3;
+  }
+}
+@media (min-width: 320px) {
   .icons {
     width: 15px;
     height: auto;
@@ -710,11 +731,13 @@ strong {
 }
 @media (min-width: 320px) {
   .rssButton {
-    width: 30px;
     height: 30px;
+    width: 30px;
     border-radius: 100%;
     border: 1px solid #fff;
     display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     margin: 0 0.25rem;
@@ -726,23 +749,6 @@ strong {
   }
   .rssButton:hover {
     border: 1px solid var(--hoverElement);
-  }
-}
-@media (min-width: 320px) {
-  .attribution {
-    font-size: 11px;
-    text-align: center;
-    width: 100%;
-  }
-}
-@media (min-width: 320px) and (min-width: 1280px) {
-  .attribution {
-    margin-top: 4rem;
-  }
-}
-@media (min-width: 320px) {
-  .attribution a {
-    color: #3e52a3;
   }
 }
 @keyframes appear {

@@ -3,42 +3,37 @@
     padding: var(--gralPadding);
     margin: 5rem auto 0 auto;
     @media (min-width: 1280px) {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-around;
+      @include flex(row, wrap,space-around,center);      
     }
     @media (min-width: 1440px) {
       justify-content: center;
-    }
-  }
-  #quotes {
-    position: absolute;
-    top: -1.25rem;
-    z-index: -1;
-    left: 0;
-    width: 30px;
-    height: auto;
-    animation: shine 2s ease 0s infinite alternate;
-    @media (min-width: 1280px) {
-      width: 60px;
-      top: -2.5rem;
-      left: -1rem;
     }
   }
   .card {
     background-color: var(--testimonialsBackground);
     border-radius: 2%;
     padding: var(--gralPadding);
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
+    @include flex(row, wrap, flex-start,center);        
     margin: 1.5rem 0.75rem;
     position: relative;
     animation: cards 3s ease 20s 1;
+    &:first-of-type {
+      div {
+        &:first-of-type {
+          position: absolute;
+          top: -1.25rem;
+          z-index: -1;
+          left: 0;
+          @include size(30px,auto);
+          animation: shine 2s ease 0s infinite alternate;
+          @media (min-width: 1280px) {
+            width: 60px;
+            top: -2.5rem;
+            left: -1rem;
+          }
+        }
+      }
+    }
     @media (min-width: 1280px) {
       width: 30%;
     }
@@ -54,8 +49,7 @@
       padding: 0;
     }
     div {
-      height: 48px;
-      width: 48px;
+      @include circle(48px);      
       img {
         border-radius: 100%;
       }

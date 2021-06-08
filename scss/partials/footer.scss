@@ -1,16 +1,11 @@
 @media (min-width: 320px) {
   footer {
-    background-color: var(--footerBackground);
-    display: flex;
-    flex-direction: column;
+    background-color: var(--footerBackground);    
+    @include flex(column, wrap, flex-start, unset);    
     padding: var(--gralPadding);
     padding-top: 14rem;
     @media (min-width: 768px) {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      justify-content: space-between;
+      @include flex(row, wrap, space-between, flex-start);           
     }
     & > :first-child {
       width: 100%;
@@ -28,11 +23,9 @@
       }
     }
     & > :nth-child(2) {
+      margin: 1rem 0;
       width: 100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: space-between;
+      @include flex(row,nowrap,space-between,flex-start);    
       @media (min-width: 768px) {
         width: 40%;
       }
@@ -43,15 +36,10 @@
         text-align: left;
         width: 95%;
         padding: 0 1.5rem 0 1rem;
-        
       }
     }
     & > :nth-child(3) {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
+      @include flex (row, wrap,space-between, center);    
       @media (min-width: 768px) {
         width: 25%;
         margin-top: 1rem;
@@ -84,16 +72,11 @@
       }
     }
     & > :nth-child(6) {
-      display: flex;
-      flex-direction: row;
+      @include flex (row, nowrap,center, center);
       width: 100%;
-      justify-content: center;
-      align-items: center;
       margin: 4rem 0 2rem 0;
       @media (min-width: 1280px) {
         width: 30%;
-        justify-content: center;
-        align-items: center;
         margin: 1rem 0;
       }
       @media (mon-width: 1440px) {
@@ -102,20 +85,26 @@
         margin: 1rem 0;
       }
     }
+    & > :nth-child(7) {
+      font-size: 11px;
+      text-align: center;
+      width: 100%;
+      @media (min-width: 1280px) {
+        margin-top: 4rem;
+      }
+      a {
+        color: hsl(228, 45%, 44%);
+      }
+    }
   }
   .icons {
-    width: 15px;
-    height: auto;
+    @include size(15px,auto);    
     margin: 0.5rem 0;
   }
   .rssButton {
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
+    @include circle(30px);
     border: 1px solid #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex(row, nowrap,center,center);    
     margin: 0 0.25rem;
     transition: all 0.5s ease;
     cursor: pointer;
@@ -126,17 +115,6 @@
     }
     &:hover {
       border: 1px solid var(--hoverElement);
-    }
-  }
-  .attribution {
-    font-size: 11px;
-    text-align: center;
-    width: 100%;
-    @media (min-width: 1280px) {
-      margin-top: 4rem;
-    }
-    a {
-      color: hsl(228, 45%, 44%);
     }
   }
 }
