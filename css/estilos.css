@@ -266,15 +266,23 @@ strong {
 }
 @media (min-width: 320px) and (min-width: 768px) {
   main > :last-child div:first-of-type {
-    width: 100%;
-    grid-column: 1/2;
-    grid-row: 1/5;
+    width: 50%;
     padding: 1.5rem;
     margin: 0 auto;
   }
 }
+@media (min-width: 320px) and (min-width: 768px) {
+  main > :last-child div:nth-of-type(2) {
+    width: 50%;
+  }
+}
+@media (min-width: 320px) and (min-width: 768px) and (min-width: 1440px) {
+  main > :last-child div:nth-of-type(2) {
+    padding: 0 4rem;
+  }
+}
 @media (min-width: 320px) {
-  main > :last-child div:last-of-type {
+  main > :last-child div:last-of-type div {
     width: 130px;
     display: flex;
     flex-direction: row;
@@ -282,23 +290,23 @@ strong {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #65e2d9;
-    padding-bottom: 0.25rem;
+    padding: 0 0 0.25rem 0;
     margin-left: 1.5rem;
     transition: all ease 0.5s;
     animation: special_link 2s ease 0s infinite alternate;
   }
-  main > :last-child div:last-of-type:hover {
+  main > :last-child div:last-of-type div:hover {
     border-bottom: 2px solid #fff;
   }
-  main > :last-child div:last-of-type a {
+  main > :last-child div:last-of-type div a {
     color: #65e2d9;
     font-size: 0.75rem;
     cursor: pointer;
   }
-  main > :last-child div:last-of-type a:hover {
+  main > :last-child div:last-of-type div a:hover {
     color: #fff;
   }
-  main > :last-child div:last-of-type div {
+  main > :last-child div:last-of-type div div {
     height: 15px;
     width: 15px;
     border: none;
@@ -307,15 +315,16 @@ strong {
   }
 }
 @media (min-width: 320px) and (min-width: 768px) {
-  main > :last-child div:last-of-type {
+  main > :last-child div:last-of-type div {
     margin: 0.5rem;
   }
 }
 @media (min-width: 320px) and (min-width: 768px) {
   main > :last-child {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
     align-items: center;
   }
 }
