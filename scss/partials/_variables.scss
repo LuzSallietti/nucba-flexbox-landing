@@ -14,7 +14,10 @@
     --gralPadding: 3rem;
   }
   @media (min-width: 1440px) {
-    --gralPadding: 6rem;
+    --gralPadding: 5rem;
+  }
+  @media (min-width: 1536px){
+    --gralPadding : 3rem;
   }
   --gradient: linear-gradient(
     90deg,

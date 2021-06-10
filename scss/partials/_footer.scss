@@ -1,5 +1,5 @@
-@media (min-width: 320px) {
   footer {
+    @media (min-width: 320px) {
     background-color: var(--footerBackground);    
     @include flex(column, wrap, flex-start, unset);    
     padding: var(--gralPadding);

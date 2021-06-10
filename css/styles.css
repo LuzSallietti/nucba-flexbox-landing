@@ -27,10 +27,67 @@
 }
 @media (min-width: 1440px) {
   :root {
-    --gralPadding: 6rem;
+    --gralPadding: 5rem;
+  }
+}
+@media (min-width: 1536px) {
+  :root {
+    --gralPadding: 3rem;
   }
 }
 
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.75);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes shine {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes appear_left {
+  from {
+    transform: translateX(-600%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes special_link {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+@keyframes cards {
+  from {
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -51,6 +108,11 @@ body {
   background-color: var(--mainBackground);
   font-size: 14px;
   animation: opacity 3s ease 1;
+}
+@media (min-width: 1440px) {
+  body {
+    font-size: 15px;
+  }
 }
 
 a {
@@ -122,11 +184,12 @@ strong {
     font-weight: 700;
   }
 }
+
 @media (min-width: 320px) {
   main > :first-child div {
     width: 100%;
     padding: var(--gralPadding);
-    animation: appear 5s ease 1;
+    animation: appear 6s ease 1;
   }
 }
 @media (min-width: 320px) and (min-width: 1280px) {
@@ -373,7 +436,7 @@ strong {
   }
 }
 @media (min-width: 320px) {
-  #shape {
+  main #shape {
     width: 100%;
     height: 75%;
     position: absolute;
@@ -385,12 +448,13 @@ strong {
     background-position: bottom;
   }
 }
-@media (min-width: 320px) and (min-width: 1440px) {
-  #shape {
+@media (min-width: 1440px) {
+  main #shape {
     height: 100%;
     background-image: url("../images/bg-curvy-desktop.svg");
   }
 }
+
 @media (min-width: 320px) {
   aside {
     padding: var(--gralPadding);
@@ -412,7 +476,7 @@ strong {
   }
 }
 @media (min-width: 320px) {
-  .card {
+  aside .card {
     background-color: var(--testimonialsBackground);
     border-radius: 2%;
     padding: var(--gralPadding);
@@ -425,7 +489,7 @@ strong {
     position: relative;
     animation: cards 3s ease 20s 1;
   }
-  .card:first-of-type div:first-of-type {
+  aside .card:first-of-type div:first-of-type {
     position: absolute;
     top: -1.25rem;
     z-index: -1;
@@ -436,25 +500,25 @@ strong {
   }
 }
 @media (min-width: 320px) and (min-width: 1280px) {
-  .card:first-of-type div:first-of-type {
+  aside .card:first-of-type div:first-of-type {
     width: 60px;
     top: -2.5rem;
     left: -1rem;
   }
 }
 @media (min-width: 320px) and (min-width: 1280px) {
-  .card {
+  aside .card {
     width: 30%;
   }
 }
 @media (min-width: 320px) and (min-width: 1440px) {
-  .card {
+  aside .card {
     margin: 0 1.25rem;
     padding: 4rem 3rem 3rem 3rem;
   }
 }
 @media (min-width: 320px) {
-  .card p {
+  aside .card p {
     width: 100%;
     text-align: left;
     line-height: 1.5rem;
@@ -463,21 +527,22 @@ strong {
   }
 }
 @media (min-width: 320px) {
-  .card div {
+  aside .card div {
     height: 48px;
     width: 48px;
     border-radius: 100%;
   }
-  .card div img {
+  aside .card div img {
     border-radius: 100%;
   }
 }
 @media (min-width: 320px) {
-  .card span {
+  aside .card span {
     display: block;
     padding: 0.75rem;
   }
 }
+
 @media (min-width: 320px) {
   form {
     border-radius: 5%;
@@ -565,6 +630,7 @@ strong {
     background: var(--hoverElement);
   }
 }
+
 @media (min-width: 320px) {
   footer {
     background-color: var(--footerBackground);
@@ -731,86 +797,30 @@ strong {
     color: #3e52a3;
   }
 }
-@media (min-width: 320px) {
-  .icons {
-    width: 15px;
-    height: auto;
-    margin: 0.5rem 0;
-  }
+footer .icons {
+  width: 15px;
+  height: auto;
+  margin: 0.5rem 0;
 }
-@media (min-width: 320px) {
-  .rssButton {
-    height: 30px;
-    width: 30px;
-    border-radius: 100%;
-    border: 1px solid #fff;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0.25rem;
-    transition: all 0.5s ease;
-    cursor: pointer;
-  }
-  .rssButton i:hover {
-    color: var(--hoverElement);
-  }
-  .rssButton:hover {
-    border: 1px solid var(--hoverElement);
-  }
+footer .rssButton {
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  border: 1px solid #fff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0.25rem;
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
-@keyframes appear {
-  0% {
-    opacity: 0;
-    transform: scale(0.75);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
+footer .rssButton i:hover {
+  color: var(--hoverElement);
 }
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes shine {
-  from {
-    opacity: 0.5;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes appear_left {
-  from {
-    transform: translateX(-600%);
-  }
-  to {
-    transform: translateX(0);
-  }
-}
-@keyframes special_link {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
-@keyframes cards {
-  from {
-    transform: rotate(180deg);
-    opacity: 0;
-  }
-  to {
-    transform: rotate(0);
-    opacity: 1;
-  }
+footer .rssButton:hover {
+  border: 1px solid var(--hoverElement);
 }
 
-/*# sourceMappingURL=estilos.css.map */
+/*# sourceMappingURL=styles.css.map */

@@ -16,6 +16,9 @@
     background-color: var(--mainBackground);
     font-size: 14px;
     animation: opacity 3s ease 1;
+    @media (min-width:1440px){
+      font-size: 15px;
+    }
   }
   a {
     color: var(--textsColor);

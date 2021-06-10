@@ -1,10 +1,10 @@
-@media (min-width: 320px) {
-  main {
+main {
+  @media (min-width: 320px) {
     & > :first-child {
       div {
         width: 100%;
         padding: var(--gralPadding);
-        animation: appear 5s ease 1;
+        animation: appear 6s ease 1;
         @media (min-width: 1280px) {
           width: 50%;
           padding: var(--gralPadding);
@@ -17,7 +17,7 @@
         }
       }
       button {
-        @include size(235px,50px);
+        @include size(235px, 50px);
         border-radius: 50px;
         display: block;
         margin: 2.5rem auto;
@@ -64,8 +64,8 @@
     & > :nth-child(2) {
       margin: var(--yMargin);
       ul {
-        @media (min-width: 768px) {          
-          @include flex(row,wrap,space-around,center);       
+        @media (min-width: 768px) {
+          @include flex(row, wrap, space-around, center);
           @media (min-width: 1440px) {
             justify-content: center;
           }
@@ -80,7 +80,7 @@
           }
           h3 {
             text-align: center;
-            font-family: var(--secondaryFont);            
+            font-family: var(--secondaryFont);
             font-weight: 700;
             margin-bottom: 1rem;
           }
@@ -100,29 +100,29 @@
         }
       }
     }
-    & > :last-child {      
+    & > :last-child {
       & div {
         &:first-of-type {
           padding: var(--gralPadding);
           animation: shine 3s ease 0s infinite alternate;
           @media (min-width: 768px) {
-            width: 50%;            
+            width: 50%;
             padding: 1.5rem;
             margin: 0 auto;
           }
         }
-        &:nth-of-type(2){
-          @media (min-width: 768px){
+        &:nth-of-type(2) {
+          @media (min-width: 768px) {
             width: 50%;
-            @media (min-width:1440px){
+            @media (min-width: 1440px) {
               padding: 0 4rem;
             }
           }
         }
         &:last-of-type {
-          div{
-            width: 130px;         
-            @include flex(row, nowrap, space-between, center);          
+          div {
+            width: 130px;
+            @include flex(row, nowrap, space-between, center);
             border-bottom: 2px solid hsl(176, 68%, 64%);
             padding: 0 0 0.25rem 0;
             margin-left: 1.5rem;
@@ -140,7 +140,7 @@
               }
             }
             div {
-              @include square(15px);            
+              @include square(15px);
               border: none;
               padding: 0;
               margin: 0;
@@ -149,18 +149,17 @@
               margin: 0.5rem;
             }
           }
-         
         }
       }
       @media (min-width: 768px) {
-        @include flex (row, nowrap, center, center);       
+        @include flex(row, nowrap, center, center);
         @media (min-width: 1280px) {
           padding: var(--gralPadding);
         }
         @media (min-width: 1440px) {
           padding: 1rem 6rem;
         }
-      }      
+      }
       h1 {
         font-size: 19px;
         width: 100%;
@@ -188,7 +187,8 @@
     }
   }
   #shape {
-    @include size(100%, 75%);    
+    @media (min-width:320px){
+    @include size(100%, 75%);
     position: absolute;
     z-index: -1;
     top: 0;
@@ -196,6 +196,7 @@
     background-image: url("../images/bg-curvy-mobile.svg");
     background-repeat: no-repeat;
     background-position: bottom;
+    }
     @media (min-width: 1440px) {
       height: 100%;
       background-image: url("../images/bg-curvy-desktop.svg");
